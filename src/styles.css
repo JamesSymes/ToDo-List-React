@@ -1,0 +1,136 @@
+/* Reset default styles */
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* App container */
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+/* Title */
+.todo-app h1 {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+/* Form container */
+.todo-app form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Input field */
+.todo-app input[type="text"] {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  margin-top: 8px; /* Added margin-top for spacing */
+  margin-bottom: 8px;
+  margin-right: 15px;
+}
+
+/* Add button */
+.todo-app button {
+  padding: 8px 14px;
+  font-size: 16px;
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Add button hover effect */
+.todo-app button:hover {
+  background-color: #3498db;
+}
+
+/* Todo list container */
+.todo-list {
+  list-style-type: none;
+  width: 300px;
+}
+
+/* Todo item */
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background-color: #444;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 8px;
+}
+
+/* Checked checkbox */
+.todo-item input[type="checkbox"]:checked {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+/* Custom check mark */
+.todo-item input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 12px;
+  border: 2px solid transparent; /* Change border color to transparent */
+  border-top: none;
+  border-right: none;
+  transform: rotate(45deg);
+  opacity: 1;
+  z-index: 1; /* Add a higher z-index to bring the check mark forward */
+}
+
+
+
+
+/* Todo text */
+.todo-item span {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Completed todo text */
+.todo-item span.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Delete button */
+.todo-item button {
+  padding: 4px 8px;
+  font-size: 14px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Delete button hover effect */
+.todo-item button:hover {
+  background-color: #c0392b;
+}
+
